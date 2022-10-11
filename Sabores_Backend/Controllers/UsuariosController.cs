@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Sabores_Backend.Models;
+using Sabores_Backend.ModelsView;
 
 namespace Sabores_Backend.Controllers
 {
@@ -29,6 +30,28 @@ namespace Sabores_Backend.Controllers
               return NotFound();
           }
             return await _context.Usuarios.ToListAsync();
+        }
+
+        // GET: api/Usuarioslogin
+        [HttpGet("{email}/{password}")]
+        public async Task<ActionResult<IEnumerable<UsuarioLoginMV>>> GetUsuariosLogin(string email, string password)
+        {
+            if (_context.Usuarios == null)
+            {
+                return NotFound();
+            }
+            var query = (from us in _context.Usuarios
+                        where us.CorreoElectronico == email && us.ContraseÃA == password
+                        select new UsuarioLoginMV
+                        {
+                            DocumentoIdentidad = us.DocumentoIdentidad,
+                            CorreoElectronico = us.CorreoElectronico,
+                            Apellido = us.Apellido,
+                            Nombre= us.Nombre,
+                            Rol=us.Rol,
+                        }).ToListAsync();
+
+            return await query;
         }
 
         // GET: api/Usuarios/5

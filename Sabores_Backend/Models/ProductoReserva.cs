@@ -11,7 +11,5 @@ namespace Sabores_Backend.Models
         public int? Cantidad { get; set; }
         public string? Nota { get; set; }
 
-        public virtual Producto? IdProductoNavigation { get; set; }
-        public virtual Reserva? IdReservaNavigation { get; set; }
     }
 }

@@ -109,10 +109,7 @@ namespace Sabores_Backend.Models
 
                
 
-                entity.HasOne(d => d.IdReservaNavigation)
-                    .WithMany(p => p.ProductoReservas)
-                    .HasForeignKey(d => d.IdReserva)
-                    .HasConstraintName("FK__Producto___idRes__4AB81AF0");
+               
             });
 
             modelBuilder.Entity<ProductoVentum>(entity =>
@@ -169,10 +166,6 @@ namespace Sabores_Backend.Models
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 
-                entity.HasOne(d => d.IdSedeNavigation)
-                    .WithMany(p => p.Reservas)
-                    .HasForeignKey(d => d.IdSede)
-                    .HasConstraintName("FK__Reserva__idSede__412EB0B6");
 
              
             });

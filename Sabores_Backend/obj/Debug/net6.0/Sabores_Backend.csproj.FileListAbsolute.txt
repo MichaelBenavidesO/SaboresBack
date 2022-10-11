@@ -58,7 +58,6 @@ C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\Mes
 C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\MessagePack.Annotations.dll
 C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\Microsoft.Build.Locator.dll
 C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
 C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -259,3 +258,6 @@ C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\run
 C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\Microsoft.Build.dll
+C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\Microsoft.Build.Framework.dll
+C:\Users\RYZEN\source\repos\Sabores_Backend\Sabores_Backend\bin\Debug\net6.0\Microsoft.NET.StringTools.dll

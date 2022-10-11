@@ -7,7 +7,7 @@ namespace Sabores_Backend.Models
     {
         public Sede()
         {
-            Reservas = new HashSet<Reserva>();
+            
         }
 
         public int IdSede { get; set; }
@@ -16,6 +16,6 @@ namespace Sabores_Backend.Models
         public int? Parqueaderos { get; set; }
         public bool? Activo { get; set; }
 
-        public virtual ICollection<Reserva> Reservas { get; set; }
+        
     }
 }
