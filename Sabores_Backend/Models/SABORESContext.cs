@@ -208,7 +208,7 @@ namespace Sabores_Backend.Models
                     .IsUnicode(false)
                     .HasColumnName("apellido");
 
-                entity.Property(e => e.ContraseÃA)
+                entity.Property(e => e.Contrasena)
                     .HasMaxLength(45)
                     .IsUnicode(false)
                     .HasColumnName("contraseÃ±a");
@@ -255,11 +255,7 @@ namespace Sabores_Backend.Models
                 entity.Property(e => e.IdProductoVenta).HasColumnName("idProductoVenta");
 
 
-                entity.HasOne(d => d.IdProductoVentaNavigation)
-                    .WithMany(p => p.Venta)
-                    .HasForeignKey(d => d.IdProductoVenta)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Venta__idProduct__440B1D61");
+               
             });
 
             OnModelCreatingPartial(modelBuilder);

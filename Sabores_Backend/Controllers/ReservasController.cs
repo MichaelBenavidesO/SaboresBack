@@ -21,15 +21,15 @@ namespace Sabores_Backend.Controllers
         }
 
         // GET: api/Reservas
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Reserva>>> GetReservas()
-        {
-          if (_context.Reservas == null)
-          {
-              return NotFound();
-          }
-            return await _context.Reservas.ToListAsync();
-        }
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<Reserva>>> GetReservas()
+        //{
+        //  if (_context.Reservas == null)
+        //  {
+        //      return NotFound();
+        //  }
+        //    return await _context.Reservas.ToListAsync();
+        //}
 
         // GET: api/Reservas/5
         [HttpGet("{id}")]

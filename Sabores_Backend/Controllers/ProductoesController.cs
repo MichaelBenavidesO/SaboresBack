@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Sabores_Backend.Models;
+using Sabores_Backend.ModelsView;
 
 namespace Sabores_Backend.Controllers
 {
@@ -31,6 +32,34 @@ namespace Sabores_Backend.Controllers
             return await _context.Productos.ToListAsync();
         }
 
+        // GET: api/Productoes/false
+       [HttpGet]
+        [Route("estado/{estado}")]
+
+        public async Task<ActionResult<IEnumerable<ProductoActivoMV>>> GetProductoActivo(bool estado)
+        {
+            if (_context.Productos == null)
+            {
+                return NotFound();
+            }
+
+
+            var query = (from pro in _context.Productos
+                         where pro.Estado == estado
+                         select new ProductoActivoMV
+                         {
+                             Descripcion = pro.Descripcion,
+                             Imagen = pro.Imagen,
+                             NombreProducto = pro.NombreProducto,
+                             Precio = pro.Precio,
+
+                         }).ToListAsync();
+
+            return await query;
+
+
+        }
+
         // GET: api/Productoes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Producto>> GetProducto(int id)
@@ -48,6 +77,8 @@ namespace Sabores_Backend.Controllers
 
             return producto;
         }
+
+        
 
         // PUT: api/Productoes/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

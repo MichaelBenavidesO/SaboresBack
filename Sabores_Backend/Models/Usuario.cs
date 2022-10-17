@@ -15,10 +15,11 @@ namespace Sabores_Backend.Models
         public string Apellido { get; set; } = null!;
         public string DocumentoIdentidad { get; set; } = null!;
         public string? CorreoElectronico { get; set; }
-        public string ContraseÃA { get; set; } = null!;
+        public string Contrasena { get; set; } = null!;
         public string OlvidarContrasena { get; set; } = null!;
         public string? Imagen { get; set; }
         public string Rol { get; set; } = null!;
+
 
      
     }

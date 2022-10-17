@@ -32,7 +32,7 @@ namespace Sabores_Backend.Controllers
             return await _context.Usuarios.ToListAsync();
         }
 
-        // GET: api/Usuarioslogin
+        // GET: api/Usuarioslogin/michaelbenavides2sd3as1/1351654166541
         [HttpGet("{email}/{password}")]
         public async Task<ActionResult<IEnumerable<UsuarioLoginMV>>> GetUsuariosLogin(string email, string password)
         {
@@ -41,7 +41,7 @@ namespace Sabores_Backend.Controllers
                 return NotFound();
             }
             var query = (from us in _context.Usuarios
-                        where us.CorreoElectronico == email && us.ContraseÃA == password
+                        where us.CorreoElectronico == email && us.Contrasena == password
                         select new UsuarioLoginMV
                         {
                             DocumentoIdentidad = us.DocumentoIdentidad,
@@ -49,6 +49,8 @@ namespace Sabores_Backend.Controllers
                             Apellido = us.Apellido,
                             Nombre= us.Nombre,
                             Rol=us.Rol,
+                            Contrasena=us.Contrasena,
+                            Imagen=us.Imagen
                         }).ToListAsync();
 
             return await query;
